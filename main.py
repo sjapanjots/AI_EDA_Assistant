@@ -93,9 +93,9 @@ if st.session_state.clicked[1]:
            st.write("The statistical values in your dataset are:")
            st.write(df.describe())  
            #check the correlation values in the dataset
-           st.write("The correlation values in your dataset are:")
-           correlation =  pd.DataFrame(df.corr()) 
-           st.write(correlation)
+           #st.write("The correlation values in your dataset are:")
+           #correlation =  pd.DataFrame(df.corr()) 
+           #st.write(correlation)
            #check the skewness values in the dataset
            st.write("The skewness values in your dataset are:")
            st.write(df.skew()) 
