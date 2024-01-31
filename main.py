@@ -1,22 +1,22 @@
 #Bacic or must needed dependencies to import to start the project
-import os
+#import os
 import streamlit as st
 import pandas as pd
-from tabulate import tabulate
+#from tabulate import tabulate
 
 # For using LLM the necessary packages are imported
-from langchain_community.llms import OpenAI
-from langchain_experimental.agents import create_pandas_dataframe_agent
-from dotenv import load_dotenv,find_dotenv
+#from langchain_community.llms import OpenAI
+#from langchain_experimental.agents import create_pandas_dataframe_agent
+#from dotenv import load_dotenv,find_dotenv
 
 #OpenAI API key which is already beign sorted and stored in other folder 
-from apikey import apikey
+#from apikey import apikey
 
 
 
 #OpenAI API key
-os.environ['OPENAI_API_KEY'] = apikey
-load_dotenv(find_dotenv())
+#os.environ['OPENAI_API_KEY'] = apikey
+#load_dotenv(find_dotenv())
 
 
 #title 
@@ -56,10 +56,10 @@ if st.session_state.clicked[1]:
          df = pd.read_csv(df , low_memory=False)
 
          #LLM model 
-         llm = OpenAI(temperature = 0) 
+         #llm = OpenAI(temperature = 0) 
 
          #Pandas agent 
-         pandas_agent = create_pandas_dataframe_agent(llm,df,verbose=True)
+         #pandas_agent = create_pandas_dataframe_agent(llm,df,verbose=True)
 
 
          #Main Function
@@ -121,13 +121,13 @@ if st.session_state.clicked[1]:
            
          main()
 
-         def df():
-           description = st.info(pandas_agent.run(f"check the data and check is there any problem in the data{df}"))
-           st.write(description)
-           st.write("Is there any other issue in the dataset let's check!!")
+         #def df():
+           #description = st.info(pandas_agent.run(f"check the data and check is there any problem in the data{df}"))
+           #st.write(description)
+           #st.write("Is there any other issue in the dataset let's check!!")
            #solution = st.info(pandas_agent.run(f"if the dataset contains any other issue and provide a solution for that{df}"))
            #st.write(solution)
-           st.balloons()
-           return 
-         df()
+           #st.balloons()
+           #return 
+         #df()
 
