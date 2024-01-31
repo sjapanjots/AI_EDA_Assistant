@@ -4,10 +4,6 @@ import streamlit as st
 import pandas as pd
 from tabulate import tabulate
 
-#this is used to hide display the error message
-import sys
-
-
 # For using LLM the necessary packages are imported
 from langchain_community.llms import OpenAI
 from langchain_experimental.agents import create_pandas_dataframe_agent
@@ -16,8 +12,7 @@ from dotenv import load_dotenv,find_dotenv
 #OpenAI API key which is already beign sorted and stored in other folder 
 from apikey import apikey
 
-# this uses to manage the time for the data
-import time
+
 
 #OpenAI API key
 os.environ['OPENAI_API_KEY'] = apikey
@@ -136,4 +131,3 @@ if st.session_state.clicked[1]:
            return 
          df()
 
-sys.tracebacklimit = 0
