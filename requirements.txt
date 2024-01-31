@@ -1,5 +1,6 @@
+numpy
 streamlit 
 pandas 
-tabulate
-OpenAI
+openai
 dotenv
+python-dotenv
