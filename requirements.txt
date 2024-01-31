@@ -1,0 +1,9 @@
+streamlit 
+lanchain_community
+pandas 
+tabulate
+os
+sys
+OpenAI
+dotenv
+langchain_experimental
