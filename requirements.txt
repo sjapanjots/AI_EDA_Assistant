@@ -1,6 +1,2 @@
-numpy
 streamlit 
 pandas 
-openai
-dotenv
-python-dotenv
