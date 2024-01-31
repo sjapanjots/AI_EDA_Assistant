@@ -1,9 +1,8 @@
 streamlit 
-lanchain_community
+lanchain
 pandas 
 tabulate
 os
 sys
 OpenAI
 dotenv
-langchain_experimental
