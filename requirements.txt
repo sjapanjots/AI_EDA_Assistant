@@ -1,6 +1,5 @@
 streamlit 
 pandas 
 tabulate
-sys
 OpenAI
 dotenv
