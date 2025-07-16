@@ -1,59 +1,60 @@
-# 🐶🐱 Dog vs Cat Image Classifier using Deep Learning
+# 🤖 AI EDA Assistant
 
-A convolutional neural network (CNN)-based deep learning model that classifies images of dogs and cats using TensorFlow and Keras.
+A smart Exploratory Data Analysis (EDA) assistant that automates data profiling, visualization, and summarization using Python and AI-powered tools.
 
 ---
 
 ## 🚀 Project Overview
 
-This project demonstrates a simple deep learning workflow using a Convolutional Neural Network (CNN) to distinguish between dog and cat images. It includes data preprocessing, model building, training, evaluation, and prediction on custom inputs.
+This project is designed to assist data scientists and analysts by automating the most common EDA tasks. With just a few lines of code, the assistant can generate data summaries, detect nulls, display feature distributions, correlations, and offer insights using natural language.
 
 ---
 
 ## 💻 Tech Stack
 
 - **Python**
-- **TensorFlow / Keras** – For building and training the CNN
-- **OpenCV** – For image loading and preprocessing
-- **NumPy / Matplotlib** – For array handling and visualization
-- **Jupyter Notebook** – For development and experimentation
+- **Pandas / NumPy** – For data manipulation and statistical calculations
+- **Matplotlib / Seaborn** – For plotting and visualizations
+- **Streamlit** – To build an interactive web interface
+- **YData Profiling** – For automatic EDA reports
+- **scikit-learn** – For preprocessing and basic ML utilities
 
 ---
 
 ## 📄 What's Inside
 
-- `Dog_vs_Cat_CNN.ipynb`  
-  Jupyter Notebook containing the full code for:
-  - Loading and preprocessing image data
-  - Creating and training the CNN model
-  - Evaluating accuracy and loss
-  - Making predictions on test data
+- `app.py`  
+  The Streamlit application that powers the assistant.
 
-- `dataset/`  
-  Contains training and test images of dogs and cats, typically structured as:
+- `eda_tools.py`  
+  Custom Python script for handling EDA logic and feature generation.
+
+- `requirements.txt`  
+  Python dependencies required to run the application:
   ```
-  dataset/
-    └── train/
-        ├── cats/
-        └── dogs/
-    └── test/
+  streamlit
+  pandas
+  numpy
+  matplotlib
+  seaborn
+  ydata-profiling
+  scikit-learn
   ```
+
+- `sample_datasets/`  
+  Includes example datasets you can use to test the tool.
 
 ---
 
-## 🧠 How It Works
+## 🧠 Features
 
-1. **Data Preparation**  
-   Images are resized and normalized. They are labeled automatically based on directory structure (`cats/` or `dogs/`).
-
-2. **Model Architecture**  
-   A basic CNN with convolutional, max-pooling, and dense layers. Compiled with `binary_crossentropy` loss for binary classification.
-
-3. **Training**  
-   Model is trained over multiple epochs, with accuracy and loss visualized using plots.
-
-4. **Prediction**  
-   Custom images can be passed through the model to predict if it's a **dog** or a **cat**.
+- Upload CSV files and get:
+  - Dataset overview (shape, dtypes, missing values)
+  - Descriptive statistics
+  - Correlation matrix and heatmap
+  - Class balance checks (for classification tasks)
+  - Automated report using YData Profiling
+- Simple, interactive controls using Streamlit sidebar
 
 ---
 
@@ -61,31 +62,32 @@ This project demonstrates a simple deep learning workflow using a Convolutional 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/sjapanjots/Dog_Vs_Cat_Deep_Learning.git
-   cd Dog_Vs_Cat_Deep_Learning
+   git clone https://github.com/sjapanjots/AI_EDA_Assistant.git
+   cd AI_EDA_Assistant
    ```
 
-2. **Install required packages**:
+2. **Install dependencies**:
    ```bash
-   pip install tensorflow opencv-python matplotlib numpy jupyter
+   pip install -r requirements.txt
    ```
 
-3. **Launch the notebook**:
+3. **Run the Streamlit app**:
    ```bash
-   jupyter notebook
+   streamlit run app.py
    ```
 
-4. Open `Dog_vs_Cat_CNN.ipynb` and run all cells.
+4. Go to `http://localhost:8501` in your browser.
 
 ---
 
-## 🖼️ Sample Result
+## 🖼️ Sample Use Case
 
-- Input: Random image of a dog  
-- Output: **Predicted: Dog**
-
-- Input: Random image of a cat  
-- Output: **Predicted: Cat**
+- Upload: `iris.csv`  
+- Output:
+  - Data summary
+  - Target distribution
+  - Feature correlation heatmap
+  - Automated profiling report (HTML)
 
 ---
 
